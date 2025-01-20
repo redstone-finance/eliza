@@ -812,6 +812,11 @@ export async function initializeClients(
         if (xmtpClient) clients.xmtp = xmtpClient;
     }
 
+    if (clientTypes.includes(Clients.CLARA)) {
+        const claraClient = await ClaraClientInterface.start(runtime);
+        if (claraClient) clients.clara = claraClient;
+    }
+
     if (clientTypes.includes(Clients.DISCORD)) {
         const discordClient = await DiscordClientInterface.start(runtime);
         if (discordClient) clients.discord = discordClient;
@@ -1045,6 +1050,7 @@ export async function createAgent(
                 ? confluxPlugin
                 : null,
             nodePlugin,
+            getSecret(character, "AO_WALLET") ? aoPlugin : null,
             getSecret(character, "ROUTER_NITRO_EVM_PRIVATE_KEY") &&
             getSecret(character, "ROUTER_NITRO_EVM_ADDRESS")
                 ? nitroPlugin

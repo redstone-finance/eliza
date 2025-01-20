@@ -67,6 +67,9 @@ coverage
 .eslintcache
 
 agent/content
+.secrets
+profiles/
+
 
 eliza.manifest
 eliza.manifest.sgx
