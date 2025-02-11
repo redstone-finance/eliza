@@ -157,6 +157,7 @@ import { ankrPlugin } from "@elizaos/plugin-ankr";
 import { formPlugin } from "@elizaos/plugin-form";
 import { MongoClient } from "mongodb";
 import { quickIntelPlugin } from "@elizaos/plugin-quick-intel";
+import ClaraClientInterface from "@elizaos/client-clara";
 
 import { trikonPlugin } from "@elizaos/plugin-trikon";
 import arbitragePlugin from "@elizaos/plugin-arbitrage";
@@ -1050,7 +1051,6 @@ export async function createAgent(
                 ? confluxPlugin
                 : null,
             nodePlugin,
-            getSecret(character, "AO_WALLET") ? aoPlugin : null,
             getSecret(character, "ROUTER_NITRO_EVM_PRIVATE_KEY") &&
             getSecret(character, "ROUTER_NITRO_EVM_ADDRESS")
                 ? nitroPlugin

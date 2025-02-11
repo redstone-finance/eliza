@@ -502,7 +502,7 @@ export class DirectClient {
                 const response = await generateObject({
                     runtime,
                     context,
-                    modelClass: ModelClass.SMALL, // 1s processing time on openai small
+                    modelClass: ModelClass.LARGE, // 1s processing time on openai small
                     schema: hyperfiOutSchema,
                 });
 
