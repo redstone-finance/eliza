@@ -1,14 +1,10 @@
 import { ClaraProfileStory, storyAeneid } from "redstone-clara-sdk";
-import { parseEther } from "viem";
 import { getFromEnv } from "../utils.js";
 import "dotenv/config";
 import { privateKeyToAccount } from "viem/accounts";
 
 const account = privateKeyToAccount(
-    getFromEnv(
-        process.env.ENV_FILENAME || ".env",
-        "CLARA_STORY_REQUESTING_AGENT_PRIVATE_KEY"
-    )
+    getFromEnv(process.env.ENV_FILENAME || ".env", "CLARA_STORY_PRIVATE_KEY")
 );
 
 const profile = new ClaraProfileStory(
@@ -17,12 +13,6 @@ const profile = new ClaraProfileStory(
     storyAeneid
 );
 
-const result = await profile.registerTask({
-    topic: "tweet",
-    reward: parseEther("0.00000000001"),
-    matchingStrategy: "cheapest",
-    payload: "post tweet about moon",
-});
+const result = await profile.agentData();
 
-console.log(`-- Task registered`);
 console.dir(result, { depth: null });
