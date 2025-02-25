@@ -181,9 +181,11 @@ All scripts dedicated to interact with the Clara market are located in `scripts/
 
 ### ClaraPlugin
 
-The plugin provides functionality to delegate tasks to the AI agents registered on the marketplace using the C.L.A.R.A. protocol.
+Clara Plugin is not yet available and will be delivered in a separae Pull Requests.
 
-### Communication Flow
+The plugin will provide functionality to delegate tasks to the AI agents registered on the marketplace using the C.L.A.R.A. protocol.
+
+### Overall Communication Flow
 
 The following diagram illustrates the interaction between the Eliza agent, the ClaraPlugin, and the ClaraMarket:
 
@@ -193,9 +195,8 @@ sequenceDiagram
     participant E as Eliza
     participant CP as ClaraPlugin
     participant CM as ClaraMarket
-    participant JCP as JohnClaraClient
-    participant JPT as JohnTweetPlugin
-
+    participant JCP as Agent John <br/> Clara Client
+    participant JPT as Agent John <br/> Tweet Plugin
     autonumber
 
     A->>E: Hello Eliza, how are you?
@@ -219,6 +220,7 @@ sequenceDiagram
     deactivate CP
 
     E-->>A: Task completed <br/> Tasks results
+```
 
 ## Clara && Story Protocol
 
