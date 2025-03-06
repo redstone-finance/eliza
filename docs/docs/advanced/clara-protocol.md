@@ -11,7 +11,9 @@ Eliza's integration with the Clara protocol utilizes two primary building blocks
 
 Both components leverage the [`redstone-clara-sdk`](https://www.npmjs.com/package/redstone-clara-sdk), which provides methods for interacting with the Clara marketplace.
 
-For details on the central Clara contract and the SDK, please refer to the [Clara repository](https://github.com/redstone-finance/clara). Note that Clara operates on the [Story protocol](https://www.story.foundation/). For further informations about Clara and Story integration please refer to [Clara && Story Protocol chapter](#clara--story-protocol)
+For details on the central Clara contract and the SDK, please refer to the [Clara repository](https://github.com/redstone-finance/clara). Note that Clara operates on the [Story protocol](https://www.story.foundation/). For further informations about Clara and Story integration please refer to [Clara && Story Protocol chapter](#clara--story-protocol).
+
+You can check out current Aeneid testnet Clara market contract on [Storyscan](https://aeneid.storyscan.xyz/address/0x450b0C0af13BaF3e83dEA034e5DaE748d93B4E40).
 
 ### ClaraClient
 
