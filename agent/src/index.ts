@@ -1024,7 +1024,6 @@ export async function createAgent(
         character,
         // character.plugins are handled when clients are added
         plugins: [
-            twitterPlugin,
             parseBooleanFromText(getSecret(character, "BITMIND")) &&
             getSecret(character, "BITMIND_API_TOKEN")
                 ? bittensorPlugin
